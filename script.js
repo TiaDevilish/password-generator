@@ -11,9 +11,9 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword)
+generateBtn.addEventListener("click", writePassword);
 
-
+function generatePassword(){
 //prompt for lenght of char
 var length = prompt("Please, enter the desired lenght of characters for your password, between 8 and 128.");
 for (var i = length; i <= 8 || i >= 128; length = prompt("Please, enter the desired lenght of characters for your password, between 8 and 128.")) {
@@ -39,4 +39,5 @@ while (!lowerCase && !upperCase && !numbers && !specialChar) {
   upperCase = confirm("Would you like to include upper case characters?");
   numbers = confirm("Would you like to include numbers?");
   specialChar = confirm("Would you like to include special characters?");
+}
 }
