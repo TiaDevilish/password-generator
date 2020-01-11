@@ -16,8 +16,6 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword(){
 //prompt for lenght of char
 var length = prompt("Please, enter the desired lenght of characters for your password, between 8 and 128.");
-for (var i = length; i <= 8 || i >= 128; length = prompt("Please, enter the desired lenght of characters for your password, between 8 and 128.")) {
-  console.log(i);
 
   if (length < 8 || length > 128) {
     alert("The length of your password should be between 8 and 128 characters!");
