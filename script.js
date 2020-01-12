@@ -49,7 +49,8 @@ var specialCharStr = "~!@#$%^&*()_+}{][:;?";
 var charArray = [];
 var characters = "";
 var password = "";
-var randomChars = "";
+
+
   // for loop to gen password. if lowercase true, then add lowercasestr to arr//NO
   if (lowerCase){
     characters += lowerCaseStr;
