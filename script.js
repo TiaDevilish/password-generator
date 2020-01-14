@@ -49,27 +49,41 @@ var specialCharStr = "~!@#$%^&*()_+}{][:;?";
 var charArray = [];
 var characters = "";
 var password = "";
+var guaranteedArray = [];
 
 
   // for loop to gen password. if lowercase true, then add lowercasestr to arr//NO
   if (lowerCase){
     characters += lowerCaseStr;
+    guaranteedArray.push(lowerCaseStr[Math.floor(Math.random() * lowerCaseStr.length)])
   }
-  if (upperCase){
+    if (upperCase){
     characters += upperCaseStr;
+    guaranteedArray.push(upperCaseStr[Math.floor(Math.random() * upperCaseStr.length)])
   }
   if (numbers){
     characters += numbersStr;
+    guaranteedArray.push(numbersStr[Math.floor(Math.random() * numbersStr.length)])
   }
   if (specialChar){
     characters += specialCharStr;
+    guaranteedArray.push(specialCharStr[Math.floor(Math.random() * specialCharStr.length)])
   }
+ 
   charArray = characters.split("");
   console.log(charArray);
+  console.log(guaranteedArray);
   
   for (var i = 0; i < length; i ++) {
     var chosenEl = charArray[Math.floor(Math.random() * charArray.length)];
     password += chosenEl;
   }
-  return password;
+  var passwordArray = password.split("");
+  for (var i = 0; i < guaranteedArray.length; i ++) {
+    passwordArray[i]=guaranteedArray[i]
+  }
+  var finalPassword = passwordArray.join('');
+  return finalPassword;
 }
+
+
