@@ -72,11 +72,11 @@ var guaranteedArray = [];
  
   charArray = characters.split("");
   
-
   for (var i = 0; i < length; i ++) {
     var chosenEl = charArray[Math.floor(Math.random() * charArray.length)];
     password += chosenEl;
   }
+  //guaranteed characters
   var passwordArray = password.split("");
   for (var i = 0; i < guaranteedArray.length; i ++) {
     passwordArray[i]=guaranteedArray[i]
