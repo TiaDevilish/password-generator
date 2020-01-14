@@ -41,7 +41,8 @@ while (!lowerCase && !upperCase && !numbers && !specialChar) {
   numbers = confirm("Would you like to include numbers?");
   specialChar = confirm("Would you like to include special characters?");
 }
-//vars with chars in str// might change it to arrs,idk
+
+//vars with chars in str
 var lowerCaseStr = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbersStr = "1234567890";
@@ -51,8 +52,7 @@ var characters = "";
 var password = "";
 var guaranteedArray = [];
 
-
-  // for loop to gen password. if lowercase true, then add lowercasestr to arr//NO
+  //if  true, then add str to arr
   if (lowerCase){
     characters += lowerCaseStr;
     guaranteedArray.push(lowerCaseStr[Math.floor(Math.random() * lowerCaseStr.length)])
@@ -71,9 +71,8 @@ var guaranteedArray = [];
   }
  
   charArray = characters.split("");
-  console.log(charArray);
-  console.log(guaranteedArray);
   
+
   for (var i = 0; i < length; i ++) {
     var chosenEl = charArray[Math.floor(Math.random() * charArray.length)];
     password += chosenEl;
